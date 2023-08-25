@@ -201,6 +201,9 @@ figcaption {
     bottom: 0;
     z-index: 9999;
 }
+#gallery .fullPhoto * {
+    vertical-align: middle;
+}
 #gallery .fullPhoto img {
     height: 90vh;
     margin: 4vh auto 0;
@@ -568,7 +571,6 @@ figcaption {
     #gallery .fullPhoto img {
         width: 90vw;
         height: auto;
-        margin: 10vh auto 0;
     }
 
     #contact .map,
@@ -702,7 +704,6 @@ figcaption {
     #gallery .fullPhoto img {
         width: 95vw;
         height: auto;
-        margin: 20vh auto 0;
     }
 
     #contact .map,
@@ -754,10 +755,6 @@ figcaption {
     }
 }
 @media (max-width: 320px) {
-    #gallery .fullPhoto img {
-        margin: 25vh auto 0;
-    }
-
     #contact .form form textarea {
         width: 98% !important;
     }
