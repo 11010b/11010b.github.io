@@ -200,13 +200,11 @@ figcaption {
     left: 0;
     bottom: 0;
     z-index: 9999;
-}
-#gallery .fullPhoto * {
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
 }
 #gallery .fullPhoto img {
     height: 90vh;
-    margin: 4vh auto 0;
 }
 #gallery .fullPhoto figcaption {
     color: var(--light);
