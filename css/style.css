@@ -565,6 +565,11 @@ figcaption {
         display: inline-block;
         margin: 0.5rem auto;
     }
+    #gallery .fullPhoto img {
+        width: 90vw;
+        height: auto;
+        margin: 10vh auto 0;
+    }
 
     #contact .map,
     #contact .form {
