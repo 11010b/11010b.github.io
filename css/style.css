@@ -203,6 +203,10 @@ figcaption {
     display: flex;
     align-items: center;
 }
+#gallery .fullPhoto * {
+    text-align: center;
+    margin: auto;
+}
 #gallery .fullPhoto img {
     height: 90vh;
 }
