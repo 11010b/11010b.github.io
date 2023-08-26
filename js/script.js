@@ -9,6 +9,11 @@ const navbarBrand = document.querySelector('.navbar .navbarBrand a');
 
 // Bila hamburger menu di klik
 hamburgerMenu.addEventListener('click', function (e) {
+    if (navbarItem.classList.contains('active')) {
+        hamburgerMenu.style.animation = 'halfSpinBack 0.3s linear forwards';
+    } else {
+        hamburgerMenu.style.animation = 'halfSpin 0.3s linear forwards';
+    }
     navbarItem.classList.toggle('active');
     e.preventDefault();
 });
@@ -20,14 +25,24 @@ document.addEventListener('click', function (e) {
 });
 // Change mode
 togglerMode.addEventListener('click', function () {
-    bodyElement.forEach(function (e) {
-        e.classList.toggle('dark');
-    });
     if (togglerMode.classList.contains('dark')) {
-        togglerMode.innerHTML = '<i class="bi bi-moon-stars-fill"></i>';
-        togglerMode.style.color = 'var(--light)';
+        togglerMode.style.animation = 'halfSpinBack1 0.3s linear forwards';
+        setTimeout(() => {
+            bodyElement.forEach(function (e) {
+                e.classList.toggle('dark');
+            });
+            togglerMode.innerHTML = '<i class="bi bi-sun-fill"></i>';
+            togglerMode.style.color = 'var(--light)';
+        }, 400);
     } else {
-        togglerMode.innerHTML = '<i class="bi bi-sun-fill"></i>';
+        togglerMode.style.animation = 'halfSpin1 0.3s linear forwards';
+        setTimeout(() => {
+            bodyElement.forEach(function (e) {
+                e.classList.toggle('dark');
+            });
+            togglerMode.innerHTML = '<i class="bi bi-moon-stars-fill"></i>';
+            togglerMode.style.color = 'var(--dark)';
+        }, 400);
     }
 });
 
