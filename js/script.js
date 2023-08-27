@@ -26,21 +26,21 @@ document.addEventListener('click', function (e) {
 // Change mode
 togglerMode.addEventListener('click', function () {
     if (togglerMode.classList.contains('dark')) {
-        togglerMode.style.animation = 'halfSpinBack1 0.3s linear forwards';
+        togglerMode.style.animation = `halfSpinBack1 0.3s linear forwards`;
         setTimeout(() => {
             bodyElement.forEach(function (e) {
                 e.classList.toggle('dark');
             });
-            togglerMode.innerHTML = '<i class="bi bi-sun-fill"></i>';
+            togglerMode.innerHTML = `<i class="bi bi-sun-fill"></i>`;
             togglerMode.style.color = 'var(--light)';
         }, 400);
     } else {
-        togglerMode.style.animation = 'halfSpin1 0.3s linear forwards';
+        togglerMode.style.animation = `halfSpin1 0.3s linear forwards`;
         setTimeout(() => {
             bodyElement.forEach(function (e) {
                 e.classList.toggle('dark');
             });
-            togglerMode.innerHTML = '<i class="bi bi-moon-stars-fill"></i>';
+            togglerMode.innerHTML = `<i class="bi bi-moon-stars-fill"></i>`;
             togglerMode.style.color = 'var(--dark)';
         }, 400);
     }

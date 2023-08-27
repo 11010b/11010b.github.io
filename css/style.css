@@ -50,6 +50,13 @@ section {
 h2 {
     font-size: 32px;
 }
+h2::after {
+    content: '';
+    display: block;
+    text-align: center;
+    border-bottom: 0.2rem solid var(--primary);
+    transform: scaleX(0.05);
+}
 
 figcaption {
     font-size: 22px;
@@ -266,6 +273,7 @@ figcaption {
     font-size: 22px;
 }
 #contact .form textarea {
+    margin-top: 6px;
     height: 250px !important;
     width: 99%;
     background-color: var(--light);
@@ -284,21 +292,21 @@ figcaption {
     margin: auto;
     border-radius: 5px;
     height: 48px;
-    background-color: var(--primary);
+    background: linear-gradient(to right, var(--secondary), var(--primary));
     font-size: 24px;
     font-weight: 700;
     border: 1px solid var(--dark);
-    text-shadow: 0 0 2px var(--light);
+    text-shadow: 0 0 1px var(--light);
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
 }
 #contact .form .btnSubmitMsg:hover {
-    opacity: 0.8;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
 }
 #contact .form .btnSubmitMsg.dark {
     border: 1px solid var(--light);
     color: var(--light);
-    text-shadow: 0 0 4px var(--dark);
+    text-shadow: 0 0 1px var(--dark);
 }
 #contact .form .btnSubmitMsg div {
     display: inline-block;
@@ -335,13 +343,16 @@ figcaption {
     height: 70px;
     border-radius: 5px;
     border: 1px solid var(--dark);
-    text-shadow: 0 0 4px var(--light);
+    /* text-shadow: 0 0 4px var(--light); */
     justify-content: space-between;
+    font-weight: 500;
     background-color: lightgreen;
 }
 #contact .alertSuccess.dark {
-    border-color: var(--light);
-    text-shadow: 0 0 4px var(--dark);
+    border-color: lightgreen;
+    text-shadow: none;
+    color: lightgreen;
+    background-color: transparent;
 }
 #contact .alertSuccess * {
     display: inline;

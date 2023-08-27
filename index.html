@@ -227,7 +227,11 @@
                         // Form di reset
                         form.reset();
                         alertSuccess.classList.remove('d-none');
-                        alertSuccess.innerHTML = '<td><p>Your Message Has Been Submitted.</p><a href=""><i class="bi bi-x"></i></a><div></div></td>';
+                        alertSuccess.innerHTML = `<td>
+                            <p>Your Message Has Been Submitted.</p>
+                            <a href=""><i class="bi bi-x"></i></a>
+                            <div></div>
+                        </td>`;
                         btnSub.innerHTML = 'Submit';
                         // Tutup alert
                         const alertSuccessCloseButton = document.querySelector('#contact .alertSuccess a');
@@ -242,10 +246,20 @@
                         // Tombol submit dan alert muncul, tombol loading hilang
                         btnSub.innerHTML = 'Submit';
                         alertSuccess.classList.remove('d-none');
-                        alertSuccess.innerHTML = '<td><p>Your Message Not Submitted.</p><a href=""><i class="bi bi-x"></i></a><div></div></td>';
-                        alertSuccess.style.backgroundColor = 'lightcoral';
+                        alertSuccess.innerHTML = `<td>
+                            <p>Your Message Not Submitted.</p>
+                            <a href=""><i class="bi bi-x"></i></a>
+                            <div></div>
+                        </td>`;
+                        if (alertSuccess.classList.contains('dark')) {
+                            alertSuccess.style.color = 'lightcoral';
+                            alertSuccess.style.backgroundColor = 'transparent';
+                            alertSuccess.style.border = '2px solid lightcoral';
+                        } else {
+                            alertSuccess.style.backgroundColor = 'lightcoral';
+                        }
                         // btnSub.classList.toggle('d-none');
-                        // console.error('Error!', error.message);
+                        console.error('Error!', error.message);
                         // Tutup alert
                         const alertSuccessCloseButton = document.querySelector('#contact .alertSuccess a');
                         alertSuccessCloseButton.addEventListener('click', (e) => {
