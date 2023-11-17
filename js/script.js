@@ -7,7 +7,7 @@ let photoGal = document.getElementById('fullPhoto');
 const containerThumb = document.querySelector('#gallery .container');
 const navbarBrand = document.querySelector('.navbar .navbarBrand a');
 
-// Bila hamburger menu di klik
+// If the hamburger menu clicked
 hamburgerMenu.addEventListener('click', function (e) {
     if (navbarItem.classList.contains('active')) {
         hamburgerMenu.style.animation = 'halfSpinBack 0.3s linear forwards';
@@ -21,6 +21,7 @@ hamburgerMenu.addEventListener('click', function (e) {
 document.addEventListener('click', function (e) {
     if (!hamburgerMenu.contains(e.target) && !navbarItem.contains(e.target)) {
         navbarItem.classList.remove('active');
+        hamburgerMenu.style.animation = 'halfSpinBack 0.3s linear forwards';
     }
 });
 // Change mode

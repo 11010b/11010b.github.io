@@ -92,14 +92,9 @@ figcaption {
 .navbar .navbarBrand a {
     font-weight: 800;
     font-size: 32px;
-    color: var(--primary);
-}
-.navbar .navbarBrand span {
-    color: var(--dark);
-    font-style: italic;
-}
-.navbar .navbarBrand span.dark {
-    color: var(--light);
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .navbar .navbarNav * {
     color: var(--dark);
@@ -400,22 +395,28 @@ figcaption {
     color: var(--light);
 }
 #instaIcon:hover {
-    background-color: var(--ig);
+    background: linear-gradient(45deg, var(--ig) 60%, var(--light));
+    border-radius: 50%;
 }
 #fbIcon:hover {
-    background-color: var(--fb);
+    background: linear-gradient(45deg, var(--fb) 60%, var(--light));
+    border-radius: 50%;
 }
 #waIcon:hover {
-    background-color: var(--wa);
+    background: linear-gradient(45deg, var(--wa) 60%, var(--light));
+    border-radius: 50%;
 }
 #teleIcon:hover {
-    background-color: var(--tele);
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--tele) 60%, var(--light));
 }
 #ghIcon:hover {
-    background-color: var(--gh);
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--gh) 60%, var(--light));
 }
 #dcIcon:hover {
-    background-color: var(--dc);
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--dc) 60%, var(--light));
 }
 .footer .socmed tr * {
     width: 2rem;
