@@ -250,7 +250,7 @@ figcaption {
 	color: var(--dark);
 	border: 1px solid var(--placeholder);
 	width: 99%;
-	font-size: large;
+	font-size: 2rem;
 }
 #contact .form input.dark {
 	background-color: var(--dark);
